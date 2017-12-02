@@ -109,7 +109,6 @@
                 for(var i=0; i<ROW; i++){
                     for(var j=0; j<COL; j++){
                         index++;
-                        console.log( index );
                         var oDiv = document.createElement("div");
                         oDiv.className = "img";
                         oDiv.style.backgroundImage = "url(img/thumbs/"+ index +".jpg)";
@@ -127,8 +126,8 @@
                 aImg = oContainer.getElementsByTagName("div");
                 iImgWidth = aImg[0].offsetWidth;
                 iImgHeight = aImg[0].offsetHeight;
-                fGapCol = (oContainer.offsetWidth - iImgWidth * COL) / (COL + 1);         //小图片之间的水平间隙
-                fGapRow = (oContainer.offsetHeight - iImgHeight * ROW) / (ROW + 1);       //小图片之间的垂直间隙
+                fGapCol = (oContainer.offsetWidth - iImgWidth * COL) / (COL + 1);
+                fGapRow = (oContainer.offsetHeight - iImgHeight * ROW) / (ROW + 1);
                 for(var i=0; i<NUM; i++){
                     aImg[i].style.left = (fGapCol + iImgWidth) * aImg[i].pos.col + fGapCol + "px";
                     aImg[i].style.top = (fGapRow + iImgHeight) * aImg[i].pos.row + fGapRow + "px";
@@ -153,7 +152,7 @@
                             aImg[i].style.borderWidth = "1px";
                             aImg[i].style.transform = "rotate(0deg)";
                             aImg[i].style.transitionDelay = "0ms";
-                            var oSpan = aImg[i].getElementsByTagName("span")[0];  //?????????????
+                            var oSpan = aImg[i].getElementsByTagName("span")[0];
                             oSpan.style.opacity = 1;
                             if(e.target.className == "img"){//div
                                 index = e.target.index;
